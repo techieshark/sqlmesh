@@ -47,4 +47,4 @@ Cost savings are broken up into three main categories:
 
 ### Where to find cost savings information
 
-Cost savings are shown in most of the places data warehouse costs are displayed. You can find how much Tobiko has saved you by viewing the homepage, production environment page, or individual model pages.
+Cost savings are shown in most of the places data warehouse costs are displayed. You can find how much Tobiko Cloud has saved you by viewing the homepage, production environment page, or individual model pages.
