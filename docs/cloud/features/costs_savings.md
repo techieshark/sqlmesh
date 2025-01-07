@@ -6,7 +6,7 @@ Cloud warehouse costs are determined by how much computation occurs. Clouds repo
 
 Tobiko Cloud solves this problem for you. It tracks data warehouse cost estimates per model for BigQuery and Snowflake projects that use a supported pricing plan.
 
-This granular cost information allows you to directly explain/justify your cloud warehouse expenditures. It also uncovers the models that could most benefit from efficiency improvements.
+This granular cost information allows you to directly explain/justify your cloud warehouse spend. It also uncovers the models that could most benefit from efficiency improvements.
 
 Beyond tracking your warehouse costs, Tobiko Cloud estimates how much money it saved you! Its advanced column-level impact analysis saves you even more money than open-source SQLMesh.
 
