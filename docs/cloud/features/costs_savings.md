@@ -1,6 +1,6 @@
 # Data Warehouse Costs and Savings with Tobiko
 
-Cloud data warehouses can be expensive, and finance departments are paying attention. When they come asking about your cloud budget, the best preparation is a granular understanding of how your project's components correspond to those costs.
+Cloud data warehouses can be expensive, and finance departments are paying attention. When they come asking about your cloud budget, the best preparation is a granular understanding of how your project's data pipelines map to those costs.
 
 Cloud warehouse costs are determined by how much computation occurs. Clouds report computation/cost for each executed query, but it is challenging to align every query with a specific model in your project.
 
