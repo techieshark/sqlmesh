@@ -131,8 +131,8 @@ def assert_model_versions_created(result) -> None:
     assert "Model versions created successfully" in result.output
 
 
-def assert_model_batches_executed(result) -> None:
-    assert "Model batches executed successfully" in result.output
+def assert_models_evaluated_successfully(result) -> None:
+    assert "Models evaluated successfully" in result.output
 
 
 def assert_target_env_updated(result) -> None:
@@ -141,7 +141,7 @@ def assert_target_env_updated(result) -> None:
 
 def assert_backfill_success(result) -> None:
     assert_model_versions_created(result)
-    assert_model_batches_executed(result)
+    assert_models_evaluated_successfully(result)
     assert_target_env_updated(result)
 
 
@@ -220,7 +220,7 @@ def test_plan_restate_model(runner, tmp_path):
     assert_duckdb_test(result)
     assert "No changes to plan: project files match the `prod` environment" in result.output
     assert "sqlmesh_example.full_model evaluated in" in result.output
-    assert_model_batches_executed(result)
+    assert_models_evaluated_successfully(result)
     assert_target_env_updated(result)
 
 
@@ -245,7 +245,7 @@ def test_plan_skip_backfill(runner, tmp_path, flag):
     )
     assert result.exit_code == 0
     assert_virtual_update(result)
-    assert "Model batches executed successfully" not in result.output
+    assert "Models evaluated successfully" not in result.output
 
 
 def test_plan_auto_apply(runner, tmp_path):
@@ -451,7 +451,7 @@ def test_plan_dev_no_prompts(runner, tmp_path):
     )
     assert "Apply - Backfill Tables [y/n]: " in result.output
     assert "Model versions created successfully" not in result.output
-    assert "Model batches executed successfully" not in result.output
+    assert "Models evaluated successfully" not in result.output
     assert "The target environment has been updated successfully" not in result.output
 
 
@@ -673,7 +673,7 @@ def test_run_dev(runner, tmp_path, flag):
     # Confirm backfill occurs when we run non-backfilled dev env
     result = runner.invoke(cli, ["--log-file-dir", tmp_path, "--paths", tmp_path, "run", "dev"])
     assert result.exit_code == 0
-    assert_model_batches_executed(result)
+    assert_models_evaluated_successfully(result)
 
 
 @time_machine.travel(FREEZE_TIME)
@@ -705,7 +705,7 @@ def test_run_cron_elapsed(runner, tmp_path):
         result = runner.invoke(cli, ["--log-file-dir", tmp_path, "--paths", tmp_path, "run"])
 
     assert result.exit_code == 0
-    assert_model_batches_executed(result)
+    assert_models_evaluated_successfully(result)
 
 
 def test_clean(runner, tmp_path):

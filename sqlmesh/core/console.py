@@ -411,7 +411,7 @@ class TerminalConsole(Console):
         if self.evaluation_progress_live:
             self.evaluation_progress_live.stop()
             if success:
-                self.log_success("Model batches executed successfully")
+                self.log_success("Models evaluated successfully")
 
         self.evaluation_progress_live = None
         self.evaluation_total_progress = None

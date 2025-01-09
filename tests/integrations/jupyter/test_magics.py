@@ -326,7 +326,7 @@ def test_run_dag(
     assert not output.stderr
     assert len(output.outputs) == 2
     assert convert_all_html_output_to_text(output) == [
-        "Model batches executed successfully",
+        "Models evaluated successfully",
         "Run finished for environment 'prod'",
     ]
     assert get_all_html_output(output) == [
@@ -337,7 +337,7 @@ def test_run_dag(
                 h(
                     "span",
                     {"style": SUCCESS_STYLE},
-                    "Model batches executed successfully",
+                    "Models evaluated successfully",
                     autoescape=False,
                 ),
                 autoescape=False,
