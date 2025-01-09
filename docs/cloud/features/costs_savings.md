@@ -27,6 +27,14 @@ On the General settings page (1), select your pricing plan (2), enter your costs
 
 ![Annotated image showing locations of the general settings link, pricing plan form fields, and save button](./costs_savings/costs-steps.png)
 
+For the BigQuery On Demand plan, we supply BigQuery's default cost per terabyte processed of $6.25:
+![Costs form for BigQuery On-Demand](./costs_savings/costs-bigquery-on-demand.png)
+
+For the Snowflake Credits plan, we supply Snowflake's default cost per credit of $3.00:
+![Costs form for Snowflake Credits](./costs_savings/costs-snowflake-credits.png)
+
+If your organization has negotiated a different cost, please enter that cost into the "Cost per" field instead so your organization's data warehouse cost estimates will be more accurate.
+
 ## Where to find cost and savings estimates information
 
 Estimated costs and savings are displayed on the Tobiko Cloud homepage, production environment page, runs and plans pages, and individual model pages.
