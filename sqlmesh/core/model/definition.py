@@ -2,12 +2,12 @@ from __future__ import annotations
 
 import json
 import logging
-import sys
 import types
 import re
 import typing as t
 from functools import cached_property
 from pathlib import Path
+from typing_extensions import Self
 
 import pandas as pd
 import numpy as np
@@ -59,10 +59,6 @@ if t.TYPE_CHECKING:
     from sqlmesh.core.snapshot import DeployabilityIndex, Node, Snapshot
     from sqlmesh.utils.jinja import MacroReference
 
-    if sys.version_info >= (3, 11):
-        from typing import Self
-    else:
-        from typing_extensions import Self
 
 logger = logging.getLogger(__name__)
 
